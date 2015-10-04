@@ -37,13 +37,16 @@
 //    [self.grilView.layer setValue:value forKeyPath:@"transform"];
     
     
-    [self.grilView.layer setValue:@(M_PI_2) forKeyPath:@"transform.roation"];
+//    [self.grilView.layer setValue:@(M_PI_2) forKeyPath:@"transform.roation"];
+//    
+//    self.grilView.layer.transform = CATransform3DMakeScale(0.5, 2, 0);
+//
+//    [self.grilView.layer setValue:[NSValue  valueWithCATransform3D:CATransform3DMakeScale(0.5, 2, 0)] forKeyPath:@"transform'"];
+//    
+//    [self.grilView.layer  setValue:@(0.5) forKeyPath:@"transform.scale.y"];
     
-    self.grilView.layer.transform = CATransform3DMakeScale(0.5, 2, 0);
-
-    [self.grilView.layer setValue:[NSValue  valueWithCATransform3D:CATransform3DMakeScale(0.5, 2, 0)] forKeyPath:@"transform'"];
     
-    [self.grilView.layer  setValue:@(0.5) forKeyPath:@"transform.scale.y"];
+    [self.grilView.layer setValue:[NSValue  valueWithCGPoint:CGPointMake(-100, -100)] forKeyPath:@"transform.translation.x"];
 }
 
 
