@@ -25,7 +25,11 @@
     [self  test2];
     
     
-    
+    //1.view.layer会准备一个layer graphice context (图层类型上下文)
+    //2. 调用view.layer.delegate（view）的drawlayer:incontext，并传入刚才准备好的上下文
+    //3. drawlayer,incontext方法内部又会掉用drawrect方法
+    //4.view就可以在drawrect方法中实现绘图代码 所有东西最终都会绘制到view.layer上面
+    //5.系统在将view.layer的内容拷贝到屁屏幕，于是完成了view的显示
     
 }
 
